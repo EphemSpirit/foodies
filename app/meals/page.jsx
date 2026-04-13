@@ -1,0 +1,9 @@
+import React from 'react'
+
+const MealsPage = () => {
+  return (
+    <h1>MealsPage</h1>
+  )
+}
+
+export default MealsPage
