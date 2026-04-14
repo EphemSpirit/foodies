@@ -23,7 +23,7 @@ const MealsPage = () => {
         </p>
       </header>
       <main className={styles.main}>
-        <Suspense>
+        <Suspense fallback={<p className={styles.loading}>Fetching meals</p>}>
           <Meals />
         </Suspense>
       </main>
