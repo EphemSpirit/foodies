@@ -1,5 +1,39 @@
-export default function CommunityPage() {
+import Image from "next/image"
+
+import mealIcon from "@/assets/icons/meal.png"
+import communityIcon from "@/assets/icons/community.png"
+import eventsIcon from "@/assets/icons/events.png"
+import styles from "./page.module.css"
+
+const CommunityPage = () => {
   return (
-    <h1>Community Page</h1>
+    <>
+      <header className={styles.header}>
+        <h1>
+          One shared passion: <span className={styles.highlight}>Food</span>
+        </h1>
+        <p>Join our community and share your favorite recipes!</p>
+      </header>
+      <main className={styles.main}>
+        <h2>Community Perks</h2>
+
+        <ul className={styles.perks}>
+          <li>
+            <Image src={mealIcon} alt="A meal" />
+            <p>Share & Discover recipes</p>
+          </li>
+          <li>
+            <Image src={communityIcon} alt="Crowd of people cooking" />
+            <p>Find new friends & like-minded people</p>
+          </li>
+          <li>
+            <Image src={eventsIcon} alt="A crowd of people at a cooking event" />
+            <p>Participate in exclusive events</p>
+          </li>
+        </ul>
+      </main>
+    </>
   )
 }
+
+export default CommunityPage
